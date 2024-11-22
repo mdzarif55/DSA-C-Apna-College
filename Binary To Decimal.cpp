@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-int decTObinary(int dnum)
+int BinaryToDec(int bnum)
 {
     int ans=0, pow=1;
-    while(dnum>0)
+    while(bnum>0)
     {
-        int rem = dnum%2;
-        dnum= dnum/2;
+        int rem = bnum%10;
+        bnum= bnum/2;
         ans=ans+(rem*pow);
         pow=pow*10;
     }
