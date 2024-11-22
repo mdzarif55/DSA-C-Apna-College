@@ -6,20 +6,18 @@ int BinaryToDec(int bnum)
     while(bnum>0)
     {
         int rem = bnum%10;
-        bnum= bnum/2;
         ans=ans+(rem*pow);
-        pow=pow*10;
+        bnum= bnum/10;
+        pow=pow*2;
     }
     return ans;
 
 }
 int main()
 {
-    for(int i=1; i<10; i++)
-    {
-        cout<<decTObinary(i)<<endl;
+    int bnum= 10000000000;
+    cout<<BinaryToDec(bnum)<<endl;
 
-    }
     return 0;
 }
 
